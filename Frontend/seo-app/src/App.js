@@ -14,7 +14,7 @@ export default function SEOAnalyzer() {
     setResult(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/report', { url, google_api_key });
+      const response = await axios.post('https://seo-analyzer-be.onrender.com', { url, google_api_key });
       setResult(response.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Oops... Something went wrong');
