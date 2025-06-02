@@ -72,7 +72,7 @@ export default function SEOAnalyzer() {
             <ul className="list-disc list-inside mt-2 text-sm">
               {Object.entries(result.audits)
                 .filter(([key, val]) => val.scoreDisplayMode !== 'notApplicable')
-                .slice(0, 5) // limit for simplicity
+                .slice(0, 5) 
                 .map(([key, val]) => (
                   <li key={key}>{val.title}: {val.displayValue || val.score * 100 + '%'}</li>
                 ))}
